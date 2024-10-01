@@ -1,4 +1,4 @@
-import SQLdatabase
+
 
 class User():
     # Initialises class with attributes to store key data for the account
