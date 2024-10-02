@@ -1,35 +1,51 @@
-
-
-class User():
-    # Initialises class with attributes to store key data for the account
+class User:
+    # Initializes class with attributes to store key data for the account
     def __init__(self):
-        self.accountID = ''
-        self.username = ''
+        self.studID = ''
         self.password = ''
+        self.firstName = ''
+        self.lastName = ''
+        self.email = ''
+        self.phoneNumber = ''
 
-    # Method to get user's accountID
-    def getAccountID(self):
-        return self.accountID
+    # Getters and Setters for studID
+    def getStudID(self):
+        return self.studID
 
-    # Method to set the user's accountID
-    def setAccountID(self, givenAccountID):
-        self.accountID = givenAccountID
-        return
+    def setStudID(self, givenStudID):
+        self.studID = givenStudID
 
-    # Method to change username for the user's account
-    def setUsername(self, givenUsername):
-        self.username = givenUsername
-        return
-
-    # Method to get the user's username
-    def getUsername(self):
-        return self.username
-
-    # Method to get user's password
+    # Getters and Setters for password
     def getPassword(self):
         return self.password
 
-    # Method to change user's password
     def setPassword(self, givenPassword):
         self.password = givenPassword
-        return
+
+    # Getters and Setters for firstName
+    def getFirstName(self):
+        return self.firstName
+
+    def setFirstName(self, givenFirstName):
+        self.firstName = givenFirstName
+
+    # Getters and Setters for lastName
+    def getLastName(self):
+        return self.lastName
+
+    def setLastName(self, givenLastName):
+        self.lastName = givenLastName
+
+    # Getters and Setters for email
+    def getEmail(self):
+        return self.email
+
+    def setEmail(self, givenEmail):
+        self.email = givenEmail
+
+    # Getters and Setters for phoneNumber
+    def getPhoneNumber(self):
+        return self.phoneNumber
+
+    def setPhoneNumber(self, givenPhoneNumber):
+        self.phoneNumber = givenPhoneNumber

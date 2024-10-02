@@ -33,29 +33,29 @@ class validation():
         # Checks password is within character limits
         if len(password) >= 8 and len(password) < 17:
             #Searches for uppercase letters, lowercase letters and numbers
-        for char in password:
-            asciiValue = ord(char)
-            if asciiValue >= 65 and asciiValue <= 90:
-                hasUppercase = True
+            for char in password:
+                asciiValue = ord(char)
+                if asciiValue >= 65 and asciiValue <= 90:
+                    hasUppercase = True
+                else:
+                    errorMessage = "Passsword must contain an Uppercase letter" # Sets appropriate error message
+                if asciiValue >= 97 and asciiValue <= 122:
+                    hasLowercase = True
+
+
+                    errorMessage = "Password must contain a lowercase letter"
+     # Sets appropriate error message
+                if asciiValue >= 48 and asciiValue <= 57:
+                    hasNumber = True
+                    errorMessage = "Password must contain a number"  # Sets appropriate error message
             else:
-                errorMessage = "Passsword must contain an Uppercase letter" # Sets appropriate error message
-            if asciiValue >= 97 and asciiValue <= 122:
-                hasLowercase = True
-
-
-                errorMessage = "Password must contain a lowercase letter"
- # Sets appropriate error message
-            if asciiValue >= 48 and asciiValue <= 57:
-                hasNumber = True
-                errorMessage = "Password must contain a number"  # Sets appropriate error message
-        else:
-            errorMessage = "Password must be between 8 and 17 characters"  # Sets appropriat error message
-# Returns if all conditions are met
-        if hasUppercase and hasLowercase and hasNumber:
-            return 0, "no error"  # returns boolean value and error message
-# Returns if conditions aren't met
-        else:
-            return 1, errorMessage  # returns boolean value and error message
+                errorMessage = "Password must be between 8 and 17 characters"  # Sets appropriat error message
+    # Returns if all conditions are met
+            if hasUppercase and hasLowercase and hasNumber:
+                return 0, "no error"  # returns boolean value and error message
+    # Returns if conditions aren't met
+            else:
+                return 1, errorMessage  # returns boolean value and error message
 
 
 # Checks if any fields have been left blank

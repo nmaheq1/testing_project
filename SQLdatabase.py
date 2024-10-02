@@ -83,13 +83,37 @@ class DataBase:
         except Error as e:
             print(f"Error while creating tables: {e}")
 
+    # def alter_students_table(self):
+    #     try:
+    #         cursor = self.connection.cursor()
+    #
+    #         # Alter the Students table to add PhoneNumber and Password columns
+    #         cursor.execute('''
+    #         ALTER TABLE Students
+    #         ADD PhoneNumber VARCHAR(11),
+    #         ADD Password VARCHAR(32) NOT NULL;
+    #         ''')
+    #
+    #         # Commit the changes
+    #         self.connection.commit()
+    #         print("Students table altered successfully: PhoneNumber and Password columns added.")
+    #
+    #     except Error as e:
+    #         print(f"Error while altering the Students table: {e}")
+
     def close_connection(self):
         if self.connection.is_connected():
             self.connection.close()
             print("MySQL connection closed.")
 
-# Instantiate the DataBase class to create tables
+# Instantiate the DataBase class to create tables and alter the Students table
 db_instance = DataBase()
+
+# Alter the Students table
+# db_instance.alter_students_table()
+
+# Close the connection
 db_instance.close_connection()
+
 
 
