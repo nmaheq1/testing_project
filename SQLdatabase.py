@@ -114,6 +114,28 @@ db_instance = DataBase()
 
 # Close the connection
 db_instance.close_connection()
+def saveAccount(self,firstName,lastName,email,phoneNumber,password):
+    try:
+
+        #crate connection to  database
+        db= self.connectDB()
+        mycursor = db.cursor()
+        #execute query
+        mycursor.execute('''INSERT INTO Students(FirstName,LastName,Email,PhoneNumber,Password)VALUES (%s,%s)''', (firstName,lastName,email,phoneNumber,password))
+        db.commit()
+        db.close()
+    except:
+        messagebox.showerror("Error","Unable to save data")
+        return 1
+    return 0
+
+#def DB_login(self,)
+def saveAssignment(self,):
+    db = self.connectDB()
+    mycursor = db.cursor()
+
+    assignmentName=assignmentID[0].get()
+
 
 #print("check")#
 

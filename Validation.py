@@ -68,4 +68,5 @@ def checkEntries(self, entries):
     return 0
 
 
-
+if __name__ == '__main__':
+    validation()
