@@ -83,7 +83,13 @@ def homeScreen(self):
     win1.mainloop()
     return
 
+def settingsScreen(self):
+    #craetes window using window class from ui window module
+    #passes screen tile and width and height of window
+    settingsWin = UI.Window('settings',400,300,self.formColour,self.fontColour,self.font)
+    #calls centrewindow meehtod from window class to centre the window within the users screen
+    Se
 
-if __name__ == "__main__":
+if __name__ == "__Main__":
     print("running main.py")
 
